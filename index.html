@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AVO Brand Narrative · Final merged · 2026.05">
+<title>AVO — Brand Narrative · Final · 2026.05</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Noto+Serif+KR:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --bg:#FAFAF7;
+  --paper:#FFFFFF;
+  --ink:#161614;
+  --mid:#55564F;
+  --muted:#8E9087;
+  --rule:#E3E3DA;
+  --soft:#F0F0EC;
+  --pale:#F6F7F2;
+  --forest:#346539;
+  --forest-deep:#1F4622;
+  --sage:#B9D2BD;
+  --sage-soft:#DCE7DD;
+  --warn:#7A5730;
+  --serif-en:'Playfair Display', 'Times New Roman', serif;
+  --serif-kr:'Noto Serif KR', 'Nanum Myeongjo', serif;
+  --sans:'Inter', 'Pretendard', -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+
+html { scroll-behavior:smooth; scroll-snap-type:y mandatory; }
+body {
+  font-family:var(--sans);
+  background:var(--bg);
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+
+body.lang-kr .en { display:none !important; }
+body.lang-en .kr { display:none !important; }
+body.lang-kr span.en, body.lang-kr div.en { display:none !important; }
+body.lang-en span.kr, body.lang-en div.kr { display:none !important; }
+
+/* LANG TOGGLE */
+.lang-toggle {
+  position:fixed; top:20px; right:24px;
+  display:flex; gap:0; z-index:200;
+  border:1px solid var(--rule);
+  background:var(--paper);
+}
+.lang-btn {
+  padding:6px 14px; font-size:10px;
+  letter-spacing:0.14em; text-transform:uppercase;
+  border:none; background:transparent; color:var(--muted);
+  cursor:pointer; font-family:inherit;
+  border-right:1px solid var(--rule);
+  transition:all .15s;
+}
+.lang-btn:last-child { border-right:0; }
+.lang-btn.active { background:var(--ink); color:var(--paper); }
+
+/* PAGE */
+.page {
+  position:relative; min-height:100vh;
+  padding:34px 52px 38px;
+  display:flex; flex-direction:column;
+  border-bottom:1px solid var(--rule);
+  scroll-snap-align:start;
+}
+
+.page-header {
+  display:flex; justify-content:space-between;
+  align-items:flex-start; flex-shrink:0;
+  gap:32px;
+}
+
+.breadcrumb {
+  font-size:10px; letter-spacing:0.16em;
+  text-transform:uppercase; color:var(--muted);
+  line-height:1.4;
+}
+.breadcrumb strong { color:var(--mid); font-weight:500; }
+
+.page-num {
+  font-size:10px; letter-spacing:0.12em;
+  color:var(--muted); font-weight:400;
+  text-align:right;
+}
+
+.page-body {
+  flex:1; display:flex; flex-direction:column;
+  justify-content:center; padding:56px 0 42px;
+}
+
+.page-cover .page-body { justify-content:flex-end; padding-bottom:24px; }
+
+.page-footer {
+  display:flex; justify-content:space-between;
+  align-items:flex-end; margin-top:auto;
+  padding-top:24px; flex-shrink:0;
+}
+
+.brand-mark { display:flex; align-items:center; gap:9px; }
+.brand-mark-icon { width:20px; height:20px; flex-shrink:0; }
+.brand-mark-text {
+  font-size:10px; letter-spacing:0.1em;
+  text-transform:uppercase; color:var(--mid); line-height:1.3;
+}
+
+/* COVER */
+.cover-kicker {
+  font-size:10px; letter-spacing:0.2em;
+  text-transform:uppercase; color:var(--forest);
+  margin-bottom:24px; font-weight:600;
+}
+.cover-title {
+  font-family:var(--serif-en); font-weight:400;
+  font-size:clamp(64px, 10vw, 104px);
+  line-height:0.95; letter-spacing:-0.025em;
+  margin-bottom:36px; max-width:900px;
+}
+.cover-title.kr {
+  font-family:var(--serif-kr); font-weight:500;
+  font-size:clamp(48px, 7.6vw, 88px); letter-spacing:-0.04em;
+}
+.cover-title em { font-style:italic; color:var(--forest-deep); }
+.cover-sub {
+  font-size:14px; color:var(--mid);
+  max-width:540px; line-height:1.8;
+  padding-top:24px; border-top:1px solid var(--rule);
+}
+
+.meta-grid {
+  display:grid; grid-template-columns:repeat(4, 1fr);
+  border:1px solid var(--rule); margin-top:44px;
+  max-width:880px;
+}
+.meta {
+  padding:18px; border-right:1px solid var(--rule);
+  background:rgba(255,255,255,0.4);
+}
+.meta:last-child { border-right:0; }
+.meta-label {
+  font-size:10px; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--muted); margin-bottom:8px;
+}
+.meta-val { font-size:13px; font-weight:600; color:var(--ink); line-height:1.4; }
+
+/* TYPOGRAPHY */
+.sec-display {
+  font-family:var(--serif-en); font-weight:400;
+  font-size:clamp(40px, 6vw, 68px);
+  line-height:1.05; letter-spacing:-0.025em;
+  margin-bottom:32px; max-width:850px;
+}
+.sec-display.kr {
+  font-family:var(--serif-kr); font-weight:500;
+  font-size:clamp(32px, 5vw, 56px); letter-spacing:-0.035em;
+}
+.sec-display em { font-style:italic; color:var(--forest); }
+
+.lead {
+  font-size:17px; color:var(--mid);
+  max-width:760px; line-height:1.8; margin-bottom:28px;
+}
+.lead strong { color:var(--ink); font-weight:500; }
+
+.body-text {
+  font-size:14px; color:var(--mid);
+  max-width:700px; line-height:1.85; margin-bottom:22px;
+}
+.body-text strong { color:var(--ink); font-weight:500; }
+
+.note-text {
+  font-size:12px; color:var(--muted);
+  max-width:700px; line-height:1.65; margin-top:14px;
+}
+
+.eyebrow {
+  font-size:10px; letter-spacing:0.18em;
+  text-transform:uppercase; color:var(--forest);
+  font-weight:700; margin-bottom:14px;
+}
+
+/* CONTENTS */
+.contents-list { list-style:none; margin-top:16px; }
+.contents-item {
+  display:grid; grid-template-columns:48px 1fr 80px;
+  gap:16px; align-items:baseline;
+  padding:18px 0; border-bottom:1px solid var(--rule);
+}
+.contents-item:first-child { border-top:1px solid var(--rule); }
+.contents-num { font-size:11px; letter-spacing:0.1em; color:var(--muted); }
+.contents-title {
+  font-family:var(--serif-en); font-size:22px; font-weight:400;
+}
+.contents-title.kr { font-family:var(--serif-kr); font-size:20px; font-weight:500; }
+.contents-desc {
+  font-size:12px; color:var(--muted); margin-top:4px;
+}
+.contents-pg {
+  font-size:10px; letter-spacing:0.1em; color:var(--muted);
+  text-align:right;
+}
+
+/* OVERVIEW LIST */
+.overview-lead {
+  font-family:var(--serif-en); font-weight:400;
+  font-size:clamp(28px, 4.5vw, 44px); line-height:1.2;
+  letter-spacing:-0.02em; margin-bottom:44px; max-width:760px;
+}
+.overview-lead.kr {
+  font-family:var(--serif-kr); font-weight:500;
+  font-size:clamp(24px, 3.8vw, 36px);
+}
+.overview-list { list-style:none; max-width:760px; }
+.overview-item {
+  display:grid; grid-template-columns:36px 1fr;
+  gap:14px; padding:18px 0;
+  border-bottom:1px solid var(--rule);
+  font-size:14.5px; color:var(--ink); line-height:1.7;
+}
+.overview-item:first-child { border-top:1px solid var(--rule); }
+.overview-num { font-size:11px; color:var(--muted); font-weight:400; padding-top:3px; }
+.overview-item strong { font-weight:600; }
+
+/* LINEAGE STRIP (식약동원 lineage) */
+.lineage {
+  display:flex; flex-wrap:wrap; gap:14px;
+  align-items:center; padding:22px 28px;
+  background:var(--sage-soft); border-radius:8px;
+  margin-top:36px; font-family:var(--sans); font-size:13px;
+}
+.lineage-era { color:var(--forest); font-weight:700; }
+.lineage-name {
+  font-family:var(--serif-kr); font-size:16px;
+  font-weight:500; color:var(--ink-deep);
+}
+.lineage-name-en {
+  font-family:var(--serif-en); font-size:15px;
+  color:var(--ink);
+}
+.lineage-arrow { color:var(--muted); margin:0 2px; }
+
+/* PULL QUOTE */
+.pull {
+  border-left:2px solid var(--ink);
+  padding:18px 0 18px 28px; margin:36px 0;
+  max-width:680px;
+}
+.pull-text {
+  font-family:var(--serif-en); font-style:italic;
+  font-size:21px; line-height:1.55;
+  margin-bottom:12px; color:var(--ink);
+}
+.pull-text.kr {
+  font-family:var(--serif-kr); font-style:normal;
+  font-size:19px; font-weight:500;
+}
+.pull-attr {
+  font-size:10px; letter-spacing:0.16em;
+  text-transform:uppercase; color:var(--muted);
+}
+
+/* TIMELINE (origin) */
+.timeline {
+  display:grid; grid-template-columns:repeat(3, 1fr);
+  gap:0; margin-top:48px; position:relative;
+}
+.timeline::before {
+  content:''; position:absolute; top:14px;
+  left:8%; right:8%; height:2px; background:var(--forest);
+  z-index:0;
+}
+.tl-node {
+  position:relative; z-index:1;
+  text-align:left; padding:0 18px 0 0;
+}
+.tl-dot {
+  width:14px; height:14px;
+  background:var(--bg); border:3px solid var(--forest);
+  border-radius:50%; margin-bottom:22px;
+}
+.tl-year {
+  font-family:var(--serif-en); font-size:42px;
+  color:var(--forest-deep); line-height:1;
+  letter-spacing:-0.02em; margin-bottom:10px;
+}
+.tl-name {
+  font-family:var(--serif-kr); font-size:18px;
+  color:var(--ink); margin-bottom:6px; font-weight:500;
+}
+.tl-name-en {
+  font-size:10px; letter-spacing:0.18em;
+  color:var(--muted); text-transform:uppercase;
+  margin-bottom:14px;
+}
+.tl-desc {
+  font-size:13px; color:var(--mid); line-height:1.7;
+}
+
+/* FLOW (market problem) */
+.flow {
+  display:grid; grid-template-columns:repeat(4, 1fr);
+  gap:1px; background:var(--rule);
+  border:1px solid var(--rule);
+  margin-top:30px; max-width:1080px;
+}
+.flow-step { background:var(--paper); padding:24px 22px; }
+.flow-num {
+  font-size:10px; letter-spacing:0.14em;
+  color:var(--muted); margin-bottom:14px;
+}
+.flow-title {
+  font-family:var(--serif-en); font-size:18px;
+  font-weight:400; margin-bottom:10px; line-height:1.3;
+}
+.flow-title.kr { font-family:var(--serif-kr); font-size:16px; font-weight:500; }
+.flow-desc { font-size:13px; color:var(--mid); line-height:1.7; }
+
+/* POSITIONING / TENSION GRID */
+.pos-grid {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:1px; background:var(--rule);
+  border:1px solid var(--rule);
+  margin:32px 0; max-width:1080px;
+}
+.pos-cell { background:var(--paper); padding:30px 30px; }
+.pos-label {
+  font-size:10px; letter-spacing:0.16em;
+  text-transform:uppercase; color:var(--muted); margin-bottom:12px;
+}
+.pos-title {
+  font-family:var(--serif-en); font-size:26px;
+  font-weight:400; margin-bottom:10px; line-height:1.25;
+}
+.pos-title.kr { font-family:var(--serif-kr); font-weight:500; font-size:23px; }
+.pos-desc { font-size:13px; color:var(--mid); line-height:1.75; }
+
+.bridge {
+  grid-column:1/-1;
+  background:var(--ink); color:var(--paper);
+  padding:28px; display:grid;
+  grid-template-columns:140px 1fr; gap:20px;
+}
+.bridge-label {
+  font-size:10px; letter-spacing:0.16em;
+  text-transform:uppercase; opacity:0.45; padding-top:4px;
+}
+.bridge-body {
+  font-family:var(--serif-en); font-size:19px;
+  line-height:1.5; color:var(--paper); font-weight:400;
+}
+.bridge-body.kr { font-family:var(--serif-kr); font-size:17px; font-weight:500; }
+
+/* PROMISES (3-card) */
+.promises {
+  display:grid; grid-template-columns:repeat(3, 1fr);
+  border:1px solid var(--rule); margin:32px 0;
+  max-width:1080px;
+}
+.promise-item {
+  padding:30px 26px;
+  border-right:1px solid var(--rule);
+}
+.promise-item:last-child { border-right:none; }
+.promise-num {
+  font-size:10px; letter-spacing:0.16em;
+  text-transform:uppercase; color:var(--muted); margin-bottom:14px;
+}
+.promise-text {
+  font-family:var(--serif-en); font-size:18px;
+  font-weight:400; line-height:1.35;
+  margin-bottom:6px; color:var(--ink);
+}
+.promise-text.kr {
+  font-family:var(--serif-kr); font-weight:500; font-size:16px;
+}
+.promise-sub {
+  font-size:12px; color:var(--mid);
+  margin-top:8px; line-height:1.6;
+}
+
+/* CORE FOOD DEFINITION (4-pillar) */
+.def-grid {
+  display:grid; grid-template-columns:repeat(4, 1fr);
+  gap:1px; background:var(--rule);
+  border:1px solid var(--rule);
+  margin:30px 0; max-width:1080px;
+}
+.def-cell { background:var(--paper); padding:28px 24px; }
+.def-label {
+  font-size:10px; letter-spacing:0.16em;
+  color:var(--forest); font-weight:700; margin-bottom:14px;
+}
+.def-title {
+  font-family:var(--serif-en); font-size:22px;
+  font-weight:400; margin-bottom:8px; line-height:1.25;
+}
+.def-title.kr {
+  font-family:var(--serif-kr); font-weight:500; font-size:19px;
+}
+.def-desc { font-size:13px; color:var(--mid); line-height:1.7; }
+
+/* BRAND ARCHITECTURE 3-LEVEL */
+.arch {
+  margin-top:40px; max-width:1080px;
+  display:flex; flex-direction:column; gap:14px;
+}
+.arch-level {
+  background:var(--paper); border:1px solid var(--rule);
+  padding:28px 32px; border-radius:0;
+  display:grid; grid-template-columns:160px 1fr;
+  gap:24px;
+}
+.arch-level.theory { background:var(--forest); color:var(--paper); border-color:var(--forest); }
+.arch-level.theory .arch-meta-label,
+.arch-level.theory .arch-name { color:var(--sage); }
+.arch-level.theory .arch-desc { color:rgba(255,255,255,0.85); }
+.arch-meta-label {
+  font-size:10px; letter-spacing:0.18em;
+  color:var(--muted); text-transform:uppercase; font-weight:700;
+  margin-bottom:6px;
+}
+.arch-name {
+  font-family:var(--serif-en); font-size:30px;
+  color:var(--forest-deep); font-weight:400;
+  line-height:1.1; letter-spacing:-0.015em;
+}
+.arch-name.kr {
+  font-family:var(--serif-kr); font-weight:500; font-size:26px;
+}
+.arch-desc { font-size:14px; line-height:1.7; color:var(--mid); }
+.arch-desc strong { color:var(--ink); font-weight:600; }
+.arch-level.theory .arch-desc strong { color:var(--paper); }
+
+.arch-sub-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:14px;
+  margin-top:14px;
+}
+.arch-sub {
+  border-left:3px solid var(--forest);
+  background:var(--soft); padding:16px 18px;
+}
+.arch-sub-name {
+  font-family:var(--serif-en); font-size:18px;
+  margin-bottom:6px; font-weight:400;
+}
+.arch-sub-name.kr { font-family:var(--serif-kr); font-weight:500; }
+.arch-sub-desc { font-size:12px; color:var(--mid); line-height:1.6; }
+
+.sku-list {
+  display:grid; grid-template-columns:1fr 1fr 1fr;
+  gap:8px; margin-top:14px;
+}
+.sku {
+  background:var(--soft); padding:14px 16px;
+  border-radius:0; font-size:13px; line-height:1.5;
+}
+.sku.live { background:var(--sage-soft); border-left:3px solid var(--forest); }
+.sku-status {
+  font-size:9px; letter-spacing:0.18em;
+  color:var(--forest); font-weight:700;
+  text-transform:uppercase; margin-bottom:4px;
+}
+.sku-name {
+  font-family:var(--serif-kr); font-size:14px;
+  color:var(--ink); font-weight:500;
+}
+.sku-line {
+  font-size:11px; color:var(--muted); margin-top:2px;
+}
+
+/* CLAIM TABLE (3-col Avoid/UseInstead/Reason) */
+.claim-table {
+  display:grid; grid-template-columns:1fr 1fr 1fr;
+  gap:1px; background:var(--rule);
+  border:1px solid var(--rule); margin:28px 0;
+  max-width:1080px;
+}
+.claim { background:var(--paper); padding:24px 22px; }
+.claim-label {
+  font-size:10px; letter-spacing:0.16em;
+  text-transform:uppercase; color:var(--muted);
+  margin-bottom:10px; font-weight:700;
+}
+.claim-text { font-size:13px; line-height:1.7; }
+.claim-text.bad { color:var(--warn); font-weight:600; }
+.claim-text.good { color:var(--forest); font-weight:600; }
+.claim-text.reason { color:var(--mid); }
+
+/* MESSAGING AXIS TABLE */
+.axis-table {
+  width:100%; border-collapse:collapse;
+  max-width:1080px; margin-top:14px;
+}
+.axis-table th, .axis-table td {
+  border-top:1px solid var(--rule); vertical-align:top;
+  text-align:left; padding:18px 14px;
+}
+.axis-table th {
+  font-size:10px; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--muted); font-weight:600;
+}
+.axis-table td:first-child {
+  font-weight:700; color:var(--ink); width:18%;
+  font-size:12px; letter-spacing:0.04em; text-transform:uppercase;
+}
+.axis-table td {
+  color:var(--mid); font-size:13px; line-height:1.7;
+}
+.axis-table tbody tr:last-child td { border-bottom:1px solid var(--rule); }
+
+/* VISUAL SYSTEM */
+.system-grid {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:24px; max-width:1080px; margin-top:28px;
+}
+.system-card {
+  border:1px solid var(--rule); background:var(--paper);
+  padding:28px 30px;
+}
+.system-card h4 {
+  font-family:var(--serif-en); font-size:24px;
+  font-weight:400; margin-bottom:14px;
+}
+.system-card h4.kr { font-family:var(--serif-kr); font-weight:500; font-size:21px; }
+.system-card p {
+  font-size:13px; color:var(--mid); line-height:1.75;
+}
+
+.spectrum {
+  display:flex; height:9px; gap:1px;
+  margin:22px 0 12px;
+}
+.spec-seg { flex:1; }
+.spectrum-caption {
+  font-size:11px; color:var(--muted);
+  letter-spacing:0.06em; line-height:1.6;
+}
+
+.palette {
+  display:grid; grid-template-columns:repeat(4, 1fr);
+  gap:8px; margin-top:18px;
+}
+.palette-chip {
+  border-radius:0; padding:14px 12px;
+  font-family:var(--sans); font-size:10px;
+  letter-spacing:0.14em; text-transform:uppercase;
+  font-weight:600; min-height:80px;
+  display:flex; flex-direction:column; justify-content:space-between;
+}
+.palette-chip .hex {
+  font-family:var(--serif-en); font-size:14px;
+  letter-spacing:0; text-transform:none; font-weight:400;
+}
+.pc-forest { background:var(--forest); color:var(--bg); }
+.pc-sage { background:var(--sage); color:var(--ink); }
+.pc-cream { background:var(--soft); color:var(--ink); border:1px solid var(--rule); }
+.pc-ink { background:var(--ink); color:var(--bg); }
+
+/* SYMBOL */
+.symbol-grid {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:1px; background:var(--rule);
+  border:1px solid var(--rule); margin-top:28px;
+  max-width:1080px;
+}
+.sym-cell { background:var(--paper); padding:28px 30px; }
+.sym-visual {
+  display:flex; align-items:center; justify-content:center;
+  height:120px; margin-bottom:18px;
+  background:var(--soft); border-radius:0;
+}
+.sym-label {
+  font-size:10px; letter-spacing:0.16em;
+  text-transform:uppercase; color:var(--forest);
+  font-weight:700; margin-bottom:8px;
+}
+.sym-desc { font-size:13px; color:var(--mid); line-height:1.75; }
+
+/* DECISION */
+.decision {
+  border-left:3px solid var(--forest);
+  background:var(--paper); padding:22px 26px;
+  margin-top:32px; max-width:980px;
+}
+.decision-title {
+  font-size:10px; font-weight:700;
+  letter-spacing:0.18em; text-transform:uppercase;
+  color:var(--forest); margin-bottom:8px;
+}
+.decision-body {
+  font-size:16px; line-height:1.65;
+  color:var(--ink); font-weight:500;
+}
+
+/* AI PROMPT SEED */
+.ai-seed {
+  background:var(--ink); color:var(--paper);
+  padding:36px 40px; margin-top:28px;
+  max-width:1080px; border-radius:0;
+}
+.ai-seed-label {
+  font-size:10px; letter-spacing:0.22em;
+  text-transform:uppercase; color:var(--sage);
+  font-weight:700; margin-bottom:16px;
+}
+.ai-seed-text {
+  font-family:var(--sans); font-size:13.5px;
+  line-height:1.85; color:rgba(255,255,255,0.92);
+}
+.ai-seed-text strong { color:var(--paper); font-weight:600; }
+.ai-seed-meta {
+  font-size:11px; color:rgba(255,255,255,0.5);
+  margin-top:18px; padding-top:18px;
+  border-top:1px solid rgba(255,255,255,0.15);
+}
+
+/* SUMMARY TABLE */
+.sum-table {
+  width:100%; border-collapse:collapse;
+  max-width:1080px; margin-top:18px;
+}
+.sum-table th, .sum-table td {
+  border-top:1px solid var(--rule); vertical-align:top;
+  text-align:left; padding:18px 14px;
+}
+.sum-table tbody tr:last-child td { border-bottom:1px solid var(--rule); }
+.sum-table td:first-child {
+  font-weight:700; color:var(--ink); width:22%;
+  font-size:12px; letter-spacing:0.04em; text-transform:uppercase;
+}
+.sum-table td { color:var(--mid); font-size:13.5px; line-height:1.7; }
+
+.tag-list {
+  display:flex; gap:8px; flex-wrap:wrap; margin-top:20px;
+}
+.tag {
+  border:1px solid var(--rule); background:var(--paper);
+  padding:8px 14px; font-size:12px; color:var(--mid);
+  font-family:var(--sans);
+}
+
+/* TAGLINE */
+.tagline-main {
+  font-family:var(--serif-en); font-style:italic;
+  font-size:clamp(36px, 5vw, 56px);
+  color:var(--forest); font-weight:400;
+  letter-spacing:-0.01em; margin:24px 0 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width:900px) {
+  .page { padding:28px 28px 32px; }
+  .timeline { grid-template-columns:1fr; gap:36px; }
+  .timeline::before { display:none; }
+  .flow, .def-grid, .symbol-grid, .pos-grid, .claim-table, .system-grid, .promises { grid-template-columns:1fr; }
+  .meta-grid { grid-template-columns:1fr 1fr; }
+  .arch-level { grid-template-columns:1fr; gap:14px; }
+  .arch-sub-grid, .sku-list, .palette { grid-template-columns:1fr; }
+  .bridge { grid-template-columns:1fr; }
+  .cover-title { font-size:56px; }
+  .cover-title.kr { font-size:44px; }
+}
+
+@media print {
+  .page { min-height:auto; height:100vh; page-break-after:always; padding:40px 50px; }
+  .lang-toggle { display:none; }
+  body { overflow:visible; }
+  html { scroll-snap-type:none; }
+}
+</style>
+</head>
+<body class="lang-kr">
+
+<div class="lang-toggle">
+  <button class="lang-btn" id="btn-kr" onclick="setLang('kr')">KR</button>
+  <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- ============== 01 COVER ============== -->
+<section class="page page-cover">
+  <div class="page-header">
+    <div class="breadcrumb"><strong>Brand Narrative · Final</strong><br>All Vital Organics</div>
+    <div class="page-num">v3 Merged · 2026.05</div>
+  </div>
+  <div class="page-body">
+    <div class="cover-kicker kr">브랜드 내러티브 · 최종본</div>
+    <div class="cover-kicker en">Brand Narrative · Final</div>
+
+    <div class="cover-title en">Farm to body.<br>Nothing<br><em>in between.</em></div>
+    <div class="cover-title kr">농장에서 몸까지.<br>그 사이를<br><em>덜어내다.</em></div>
+
+    <p class="cover-sub kr">AVO는 1988년 한국에서 시작된 38년의 식물 포뮬라 위에 세워진 식품 브랜드입니다. 익숙한 유기농의 신뢰를 입구로 삼고, <strong>Core Food</strong>라는 새로운 홀푸드 기준을 제안합니다.</p>
+    <p class="cover-sub en">AVO is a Korean food brand built on a 38-year plant formula begun in 1988. It uses the familiar trust of organic as an entry point, and proposes a new whole-food standard called <strong>Core Food</strong>.</p>
+
+    <div class="meta-grid">
+      <div class="meta">
+        <div class="meta-label">Project</div>
+        <div class="meta-val">AVO / All Vital Organics</div>
+      </div>
+      <div class="meta">
+        <div class="meta-label">Scope</div>
+        <div class="meta-val kr">브랜드 이론 · 내러티브 · VI</div>
+        <div class="meta-val en">Theory · Narrative · VI</div>
+      </div>
+      <div class="meta">
+        <div class="meta-label">Version</div>
+        <div class="meta-val">v3 Final · Merged</div>
+      </div>
+      <div class="meta">
+        <div class="meta-label">Purpose</div>
+        <div class="meta-val kr">디자인 가이드 베이스</div>
+        <div class="meta-val en">Design guide base</div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div></div>
+    <div class="brand-mark">
+      <svg class="brand-mark-icon" viewBox="0 0 24 24" fill="none">
+        <circle cx="9" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+        <circle cx="15" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+      </svg>
+      <div class="brand-mark-text">All Vital<br>Organics</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 02 CONTENTS ============== -->
+<section class="page">
+  <div class="page-header">
+    <div class="breadcrumb"><strong>Contents</strong> · Section Map</div>
+    <div class="page-num">P 01 / 14</div>
+  </div>
+  <div class="page-body">
+    <ul class="contents-list">
+      <li class="contents-item"><span class="contents-num">01</span>
+        <div>
+          <div class="contents-title en">At a Glance</div>
+          <div class="contents-title kr">한눈에 보기</div>
+          <div class="contents-desc kr">AVO를 정의하는 네 가지 축</div>
+          <div class="contents-desc en">Four axes that define AVO</div>
+        </div>
+        <span class="contents-pg">P 03</span>
+      </li>
+      <li class="contents-item"><span class="contents-num">02</span>
+        <div>
+          <div class="contents-title en">The Belief · 食藥同源</div>
+          <div class="contents-title kr">신념 · 식약동원</div>
+          <div class="contents-desc kr">음식과 약은 한 근원 — 3,000년의 사상</div>
+          <div class="contents-desc en">Food and medicine share one source — a 3,000-year principle</div>
+        </div>
+        <span class="contents-pg">P 04</span>
+      </li>
+      <li class="contents-item"><span class="contents-num">03</span>
+        <div>
+          <div class="contents-title en">The Origin</div>
+          <div class="contents-title kr">기원 · 창업자 검증</div>
+          <div class="contents-desc kr">1988 → 1000일 → 2026 · 창업자가 직접 증명한 원칙</div>
+          <div class="contents-desc en">1988 → 1,000 days → 2026 · Founders are the lived proof</div>
+        </div>
+        <span class="contents-pg">P 05</span>
+      </li>
+      <li class="contents-item"><span class="contents-num">04</span>
+        <div>
+          <div class="contents-title en">Why Now · Market Problem</div>
+          <div class="contents-title kr">왜 지금 · 시장 문제</div>
+          <div class="contents-desc kr">서플먼트 피로감과 슈퍼푸드의 평준화</div>
+          <div class="contents-desc en">Supplement fatigue and superfood saturation</div>
+        </div>
+        <span class="contents-pg">P 06</span>
+      </li>
+      <li class="contents-item"><span class="contents-num">05</span>
+        <div>
+          <div class="contents-title en">Positioning · The Bridge</div>
+          <div class="contents-title kr">포지셔닝 · 다리</div>
+          <div class="contents-desc kr">Organic의 신뢰 → Core Food의 기준</div>
+          <div class="contents-desc en">Familiar Organic trust → new Core Food standard</div>
+        </div>
+        <span class="contents-pg">P 07</span>
+      </li>
+      <li class="contents-item"><span class="contents-num">06</span>
+        <div>
+          <div class="contents-title en">Core Food · The Theory</div>
+          <div class="contents-title kr">Core Food · 브랜드 이론</div>
+          <div class="contents-desc kr">전체성 / 기본성 / 최소성 / 일상성</div>
+          <div class="contents-desc en">Whole / Essential / Minimal / Daily</div>
+        </div>
+        <span class="contents-pg">P 08</span>
+      </li>
+      <li class="contents-item"><span class="contents-num">07</span>
+        <div>
+          <div class="contents-title en">Brand Architecture</div>
+          <div class="contents-title kr">브랜드 구조 · 3단계</div>
+          <div class="contents-desc kr">이론 → 라인 → SKU</div>
+          <div class="contents-desc en">Theory → Lines → SKUs</div>
+        </div>
+        <span class="contents-pg">P 09</span>
+      </li>
+      <li class="contents-item"><span class="contents-num">08</span>
+        <div>
+          <div class="contents-title en">The Three Promises</div>
+          <div class="contents-title kr">세 가지 약속</div>
+          <div class="contents-desc kr">Nothing missing · Nothing extra · Nothing in between</div>
+          <div class="contents-desc en">Nothing missing · Nothing extra · Nothing in between</div>
+        </div>
+        <span class="contents-pg">P 10</span>
+      </li>
+      <li class="contents-item"><span class="contents-num">09</span>
+        <div>
+          <div class="contents-title en">Messaging Principles</div>
+          <div class="contents-title kr">메시지 원칙</div>
+          <div class="contents-desc kr">신뢰도와 규제 안정성을 위한 표현 체계</div>
+          <div class="contents-desc en">Safer claim system for credibility</div>
+        </div>
+        <span class="contents-pg">P 11</span>
+      </li>
+      <li class="contents-item"><span class="contents-num">10</span>
+        <div>
+          <div class="contents-title en">Visual System</div>
+          <div class="contents-title kr">시각 시스템</div>
+          <div class="contents-desc kr">블렌딩과 포커스 링 — 제품 구조에서 파생</div>
+          <div class="contents-desc en">Blending and focus ring — derived from product</div>
+        </div>
+        <span class="contents-pg">P 12</span>
+      </li>
+      <li class="contents-item"><span class="contents-num">11</span>
+        <div>
+          <div class="contents-title en">Symbol · Focus Ring</div>
+          <div class="contents-title kr">심볼 · 포커스 링</div>
+          <div class="contents-desc kr">생성된 마크 + 시각 장치</div>
+          <div class="contents-desc en">Generated mark + focus device</div>
+        </div>
+        <span class="contents-pg">P 13</span>
+      </li>
+      <li class="contents-item"><span class="contents-num">12</span>
+        <div>
+          <div class="contents-title en">Final Direction · AI Seed</div>
+          <div class="contents-title kr">최종 방향 · AI 시드</div>
+          <div class="contents-desc kr">요약 결론 + AI 네이티브 프롬프트 시드</div>
+          <div class="contents-desc en">Summary + AI-native prompt seed</div>
+        </div>
+        <span class="contents-pg">P 14</span>
+      </li>
+    </ul>
+  </div>
+  <div class="page-footer">
+    <div></div>
+    <div class="brand-mark">
+      <svg class="brand-mark-icon" viewBox="0 0 24 24" fill="none">
+        <circle cx="9" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+        <circle cx="15" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+      </svg>
+      <div class="brand-mark-text">All Vital<br>Organics</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 03 AT A GLANCE ============== -->
+<section class="page">
+  <div class="page-header">
+    <div class="breadcrumb"><strong>01</strong> · At a Glance</div>
+    <div class="page-num">P 03 / 14</div>
+  </div>
+  <div class="page-body">
+    <div class="overview-lead en">A 38-year principle,<br>translated for today.</div>
+    <div class="overview-lead kr">38년의 원칙을<br>오늘의 언어로 옮긴다.</div>
+
+    <ul class="overview-list">
+      <li class="overview-item">
+        <span class="overview-num">01.</span>
+        <div>
+          <span class="kr"><strong>헤리티지 · 1988년 다움(Daoom)</strong> — 김수경 박사가 시작한 한국 자연식·생식·동결건조 1세대. AVO는 그 흐름 위에 있는 3세대 브랜드입니다.</span>
+          <span class="en"><strong>Heritage · Daoom 1988</strong> — Founded by Dr. Kim Su-kyung as a first-generation Korean whole-food and freeze-drying operation. AVO is the third generation built on that lineage.</span>
+        </div>
+      </li>
+      <li class="overview-item">
+        <span class="overview-num">02.</span>
+        <div>
+          <span class="kr"><strong>창업자가 직접 검증한 원칙</strong> — 어머니의 책 『아토피 전쟁: 1000일의 기록』 속 두 아이가 바로 AVO의 두 형제, Justin & Alex Kim입니다.</span>
+          <span class="en"><strong>Lived proof from the founders</strong> — The two children in our mother's book <em>A 1,000-Day Record</em> are the two AVO co-founders, Justin & Alex Kim.</span>
+        </div>
+      </li>
+      <li class="overview-item">
+        <span class="overview-num">03.</span>
+        <div>
+          <span class="kr"><strong>식약동원 (食藥同源) · 브랜드 신념</strong> — 음식과 약은 한 근원이라는 동양의 3,000년 사상. AVO의 모든 제품은 이 원칙 위에 설계됩니다.</span>
+          <span class="en"><strong>Belief · 食藥同源</strong> — Food and medicine share one source. A 3,000-year East Asian principle that grounds every AVO product.</span>
+        </div>
+      </li>
+      <li class="overview-item">
+        <span class="overview-num">04.</span>
+        <div>
+          <span class="kr"><strong>새로운 카테고리 언어 · Core Food</strong> — 보충제도 슈퍼푸드도 아닌, 매일의 기준선을 지지하는 홀푸드 기준. 이론입니다, 제품 라벨이 아닙니다.</span>
+          <span class="en"><strong>New language · Core Food</strong> — Not supplement, not superfood. A whole-food standard that supports daily baseline. It is a brand theory, not a product claim.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="page-footer">
+    <div></div>
+    <div class="brand-mark">
+      <svg class="brand-mark-icon" viewBox="0 0 24 24" fill="none">
+        <circle cx="9" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+        <circle cx="15" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+      </svg>
+      <div class="brand-mark-text">All Vital<br>Organics</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 04 THE BELIEF ============== -->
+<section class="page">
+  <div class="page-header">
+    <div class="breadcrumb"><strong>02</strong> · The Belief</div>
+    <div class="page-num">P 04 / 14</div>
+  </div>
+  <div class="page-body">
+    <p class="eyebrow kr">食藥同源 · 신념</p>
+    <p class="eyebrow en">食藥同源 · The Belief</p>
+    <div class="sec-display en">Food and medicine<br>share <em>one source.</em></div>
+    <div class="sec-display kr">음식과 약은<br><em>한 근원이다.</em></div>
+
+    <p class="lead kr">식약동원(食藥同源)은 음식과 약이 같은 근원에서 출발한다는 동양의 3,000년 된 사상입니다. AVO는 이 원칙을 출발점이자 도착점으로 삼습니다. 현대 임상 영양학과도 이 사상은 점차 일치하고 있습니다.</p>
+    <p class="lead en">食藥同源 — the East Asian principle, traceable across 3,000 years, that food and medicine emerge from one source. AVO uses this as both starting point and standard. Modern clinical nutrition increasingly aligns with the same view.</p>
+
+    <div class="lineage">
+      <span class="lineage-era">B.C. 3C</span>
+      <span class="lineage-name kr">黃帝內經</span>
+      <span class="lineage-name-en en">Huangdi Neijing</span>
+      <span class="lineage-arrow">→</span>
+      <span class="lineage-era">明 · 淸</span>
+      <span class="lineage-name kr">本草綱目</span>
+      <span class="lineage-name-en en">Bencao Gangmu</span>
+      <span class="lineage-arrow">→</span>
+      <span class="lineage-era">21C</span>
+      <span class="kr">현대 임상 영양학</span>
+      <span class="en">Modern clinical nutrition</span>
+      <span class="lineage-arrow">→</span>
+      <span class="lineage-era">2026</span>
+      <span>AVO</span>
+    </div>
+
+    <div class="decision">
+      <div class="decision-title kr">AVO의 자리</div>
+      <div class="decision-title en">AVO's Position</div>
+      <div class="decision-body kr">사상이지, 광신이 아닙니다. AVO는 식품 회사이며, 의학적 치유나 효능을 주장하지 않습니다. 식약동원은 제품의 라벨이 아닌, 브랜드의 신념입니다.</div>
+      <div class="decision-body en">A principle, not a doctrine. AVO is a food brand and does not make medical or healing claims. 食藥同源 sits at the level of belief, not label copy.</div>
+    </div>
+
+    <p class="note-text kr"><em>Mantra:</em> "Healing through food. / 음식으로 회복합니다." — 내부 신념의 표현. 외부 카피로는 식품 기반 영양의 언어로 옮겨 사용합니다.</p>
+    <p class="note-text en"><em>Mantra:</em> "Healing through food." — An internal belief statement. Translated outward into food-based nourishment language.</p>
+  </div>
+  <div class="page-footer">
+    <div></div>
+    <div class="brand-mark">
+      <svg class="brand-mark-icon" viewBox="0 0 24 24" fill="none">
+        <circle cx="9" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+        <circle cx="15" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+      </svg>
+      <div class="brand-mark-text">All Vital<br>Organics</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 05 THE ORIGIN ============== -->
+<section class="page">
+  <div class="page-header">
+    <div class="breadcrumb"><strong>03</strong> · The Origin · Lived Proof</div>
+    <div class="page-num">P 05 / 14</div>
+  </div>
+  <div class="page-body">
+    <p class="eyebrow kr">기원 · 창업자 검증</p>
+    <p class="eyebrow en">Origin · Founders as Proof</p>
+    <div class="sec-display en">The two children<br>in the book are<br><em>the two brothers.</em></div>
+    <div class="sec-display kr">이 책에 기록된<br>두 아이가,<br><em>두 형제입니다.</em></div>
+
+    <div class="timeline">
+      <div class="tl-node">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1988</div>
+        <div class="tl-name">다움 (Daoom) 설립</div>
+        <div class="tl-name-en">Gen 1 · 김수경 박사</div>
+        <div class="tl-desc kr">한국 자연식·생식·동결건조의 1세대. HACCP 인증 시설을 갖춘 식물 포뮬라의 시작점.</div>
+        <div class="tl-desc en">A first-generation Korean whole-food and freeze-drying operation. The starting point of the plant formula AVO continues today.</div>
+      </div>
+      <div class="tl-node">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2000s</div>
+        <div class="tl-name">『아토피 전쟁: 1000일의 기록』</div>
+        <div class="tl-name-en">Gen 2 · 박정은 작가</div>
+        <div class="tl-desc kr">어머니, 박정은 작가가 두 아이의 심한 아토피를 1,000일간 음식과 환경으로 회복시킨 실제 기록.</div>
+        <div class="tl-desc en">Our mother, author Park Jung-eun, documented restoring her two children from severe atopic dermatitis over 1,000 days through food and environment alone.</div>
+      </div>
+      <div class="tl-node">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2026</div>
+        <div class="tl-name">AVO 시작</div>
+        <div class="tl-name-en">Gen 3 · Justin & Alex Kim</div>
+        <div class="tl-desc kr">책 속 그 두 아이가, 지금의 AVO 공동창업자. 물려받은 헤리티지 + 본인 몸으로 검증한 원칙.</div>
+        <div class="tl-desc en">The two children in the book are the two co-founders of AVO today. Inherited heritage and personally verified principle.</div>
+      </div>
+    </div>
+
+    <div class="pull">
+      <p class="pull-text en">"What stayed unchanged was not nostalgia. It was the principle: keep the food whole, keep the process minimal, and let the body meet the ingredient without unnecessary distance."</p>
+      <p class="pull-text kr">"바뀌지 않은 것은 향수가 아닙니다. AVO가 지켜온 것은 원칙입니다 — 음식을 통째로 유지하고, 과정을 최소화하며, 몸이 원료와 불필요한 거리 없이 만나게 하는 것."</p>
+      <div class="pull-attr">AVO · Brand Narrative</div>
+    </div>
+
+    <p class="note-text kr">Note: 본 페이지의 인용은 창업자 검증 사례를 식품 기반 회복 관점에서 설명합니다. 의학적 효능이나 질병 치료 주장이 아닙니다.</p>
+    <p class="note-text en">Note: This page frames the founders' recovery as food-based nourishment, not as a medical efficacy or disease-treatment claim.</p>
+  </div>
+  <div class="page-footer">
+    <div></div>
+    <div class="brand-mark">
+      <svg class="brand-mark-icon" viewBox="0 0 24 24" fill="none">
+        <circle cx="9" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+        <circle cx="15" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+      </svg>
+      <div class="brand-mark-text">All Vital<br>Organics</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 06 WHY NOW · MARKET PROBLEM ============== -->
+<section class="page">
+  <div class="page-header">
+    <div class="breadcrumb"><strong>04</strong> · Why Now · Market Problem</div>
+    <div class="page-num">P 06 / 14</div>
+  </div>
+  <div class="page-body">
+    <p class="eyebrow kr">왜 지금 · 시장 문제</p>
+    <p class="eyebrow en">Why Now · Market Problem</p>
+    <div class="sec-display en">People trust nature.<br>They question the <em>middle.</em></div>
+    <div class="sec-display kr">사람들은 자연을 신뢰한다.<br>다만 그 <em>사이의 과정</em>을 의심한다.</div>
+
+    <p class="lead kr">웰니스 시장은 기능의 언어로 가득합니다. 퍼포먼스, 면역, 집중, 뷰티, 장수. 그러나 기능의 언어가 강해질수록 제품은 음식으로부터 멀어져 보입니다.</p>
+    <p class="lead en">The wellness market is crowded with functional claims — performance, immunity, focus, beauty, longevity. But the more functional the language becomes, the more distant a product can feel from food itself.</p>
+
+    <div class="flow">
+      <div class="flow-step">
+        <div class="flow-num">01</div>
+        <div class="flow-title kr">서플먼트 피로감</div>
+        <div class="flow-title en">Supplement Fatigue</div>
+        <div class="flow-desc kr">성분은 많아졌지만, 소비자는 무엇을 믿어야 할지 어렵습니다.</div>
+        <div class="flow-desc en">More ingredients have not created clearer trust.</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">02</div>
+        <div class="flow-title kr">슈퍼푸드의 평준화</div>
+        <div class="flow-title en">Superfood Saturation</div>
+        <div class="flow-desc kr">대부분의 브랜드가 비슷한 자연성, 건강함, 프리미엄 이미지를 말합니다.</div>
+        <div class="flow-desc en">Brands now share the same vocabulary of nature, health, and premium.</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">03</div>
+        <div class="flow-title kr">효능 중심 언어의 리스크</div>
+        <div class="flow-title en">Claim-led Risk</div>
+        <div class="flow-desc kr">질병·치유·효과를 직접 말할수록 신뢰보다 부담이 커집니다.</div>
+        <div class="flow-desc en">Direct healing or efficacy language creates more risk than trust.</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">04</div>
+        <div class="flow-title kr">새 기준의 필요</div>
+        <div class="flow-title en">Need for a New Standard</div>
+        <div class="flow-desc kr">AVO는 기능보다 기준을 말할 때 더 설득력 있게 차별화됩니다.</div>
+        <div class="flow-desc en">AVO differentiates more credibly through standards than through functions.</div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div></div>
+    <div class="brand-mark">
+      <svg class="brand-mark-icon" viewBox="0 0 24 24" fill="none">
+        <circle cx="9" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+        <circle cx="15" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+      </svg>
+      <div class="brand-mark-text">All Vital<br>Organics</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 07 POSITIONING · THE BRIDGE ============== -->
+<section class="page">
+  <div class="page-header">
+    <div class="breadcrumb"><strong>05</strong> · Positioning · The Bridge</div>
+    <div class="page-num">P 07 / 14</div>
+  </div>
+  <div class="page-body">
+    <p class="eyebrow kr">포지셔닝 · 다리</p>
+    <p class="eyebrow en">Positioning · The Bridge</p>
+    <div class="sec-display en">A familiar word.<br>A new <em>category.</em></div>
+    <div class="sec-display kr">익숙한 단어.<br>새로운 <em>카테고리.</em></div>
+
+    <p class="lead kr">AVO는 또 하나의 서플먼트로 경쟁하기 위해 만들어지지 않았습니다. 유기농 식품이 가진 신뢰를 입구로 삼고, 매일의 기반 영양을 위한 새로운 카테고리 언어 — <strong>Core Food</strong> — 를 제안합니다.</p>
+    <p class="lead en">AVO is not built to compete as another supplement. It uses the trust of organic food as an entry point, and proposes a new category language for daily, foundational nourishment — <strong>Core Food</strong>.</p>
+
+    <div class="pos-grid">
+      <div class="pos-cell">
+        <div class="pos-label kr">친숙한 영역</div>
+        <div class="pos-label en">Familiar territory</div>
+        <div class="pos-title en">Organic</div>
+        <div class="pos-title kr">Organic</div>
+        <div class="pos-desc kr">소비자가 이미 이해하고 신뢰하는 단어. 자연성, 안전성, 원료의 온전함을 통해 AVO가 시장에 진입하는 신뢰 기반.</div>
+        <div class="pos-desc en">A word consumers already trust. Provides AVO's credible point of entry through nature, safety, and ingredient integrity.</div>
+      </div>
+      <div class="pos-cell">
+        <div class="pos-label kr">새로운 영역</div>
+        <div class="pos-label en">New territory</div>
+        <div class="pos-title en">Core Food</div>
+        <div class="pos-title kr">Core Food</div>
+        <div class="pos-desc kr">즉각적 기능 보충제도, 유행하는 슈퍼푸드도 아닙니다. 몸의 일상적 기준선을 지지하기 위해 설계된 홀푸드 포맷.</div>
+        <div class="pos-desc en">Not a quick functional fix. Not a trend superfood. A whole-food format designed to support the body's daily baseline.</div>
+      </div>
+      <div class="bridge">
+        <div class="bridge-label">AVO</div>
+        <div>
+          <div class="bridge-body kr">Organic이 Core Food를 만난다. AVO는 익숙한 신뢰를 매일의 식물 기반 영양이라는 새로운 카테고리로 전환합니다.</div>
+          <div class="bridge-body en">Organic meets Core Food. AVO converts familiar trust into a new category of daily plant-based nourishment.</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="tagline-main">"Farm to body."</p>
+    <p class="body-text kr">한국어 공식 문서에서는 <strong>"농장에서 몸까지. 그 사이를 덜어낸다."</strong> 와 같은 설명형 문장과 함께 사용합니다.</p>
+    <p class="body-text en">In official Korean copy, pair with an explanatory line: <strong>"농장에서 몸까지. 그 사이를 덜어낸다."</strong></p>
+  </div>
+  <div class="page-footer">
+    <div></div>
+    <div class="brand-mark">
+      <svg class="brand-mark-icon" viewBox="0 0 24 24" fill="none">
+        <circle cx="9" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+        <circle cx="15" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+      </svg>
+      <div class="brand-mark-text">All Vital<br>Organics</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 08 CORE FOOD · THE THEORY ============== -->
+<section class="page">
+  <div class="page-header">
+    <div class="breadcrumb"><strong>06</strong> · Core Food · The Theory</div>
+    <div class="page-num">P 08 / 14</div>
+  </div>
+  <div class="page-body">
+    <p class="eyebrow kr">Core Food · 브랜드 이론</p>
+    <p class="eyebrow en">Core Food · Brand Theory</p>
+    <div class="sec-display en">Core Food is not<br>a claim. It is a <em>theory.</em></div>
+    <div class="sec-display kr">Core Food는 주장이 아니라<br><em>이론</em>입니다.</div>
+
+    <p class="lead kr"><strong>Core Food</strong>는 분리된 기능을 더하는 방식이 아니라, 식물성 원료의 온전함을 보존함으로써 몸의 일상적 기준선을 지지하는 홀푸드 이론입니다. 카테고리가 아닌 <strong>브랜드 이론</strong>으로 작동하기 때문에 모든 라인과 SKU의 상위 기준이 됩니다.</p>
+    <p class="lead en"><strong>Core Food</strong> is a whole-food theory: support the body's daily baseline by preserving the integrity of plant-based ingredients, not by adding isolated functions. It operates at the level of <strong>brand theory</strong>, sitting above every line and SKU as their governing standard.</p>
+
+    <div class="def-grid">
+      <div class="def-cell">
+        <div class="def-label">01 · WHOLE</div>
+        <div class="def-title en">Whole, not isolated</div>
+        <div class="def-title kr">분리보다 전체성</div>
+        <div class="def-desc kr">분리 추출물보다 통째의 식물성 원료를 기반으로 합니다.</div>
+        <div class="def-desc en">Built from whole plant-based ingredients rather than isolated extracts.</div>
+      </div>
+      <div class="def-cell">
+        <div class="def-label">02 · ESSENTIAL</div>
+        <div class="def-title en">Essential, not trendy</div>
+        <div class="def-title kr">유행보다 기본</div>
+        <div class="def-desc kr">일시적 성분 트렌드보다 매일의 영양 기반을 중심에 둡니다.</div>
+        <div class="def-desc en">Designed around daily nutritional grounding, not short-lived ingredient trends.</div>
+      </div>
+      <div class="def-cell">
+        <div class="def-label">03 · MINIMAL</div>
+        <div class="def-title en">Minimal, not overworked</div>
+        <div class="def-title kr">과잉보다 최소</div>
+        <div class="def-desc kr">불필요한 가공, 가열, 추출, 첨가를 줄이는 방향을 지향합니다.</div>
+        <div class="def-desc en">Aims to reduce unnecessary processing, heat, extraction, and additives.</div>
+      </div>
+      <div class="def-cell">
+        <div class="def-label">04 · DAILY</div>
+        <div class="def-title en">Daily, not dramatic</div>
+        <div class="def-title kr">극적 효과보다 일상</div>
+        <div class="def-desc kr">의학적 해결책이 아니라, 매일 반복 가능한 식품 루틴으로 제안됩니다.</div>
+        <div class="def-desc en">Positioned as a repeatable food routine, not a medicalized solution.</div>
+      </div>
+    </div>
+
+    <div class="decision">
+      <div class="decision-title kr">중요</div>
+      <div class="decision-title en">Important</div>
+      <div class="decision-body kr">Core Food는 식품 카테고리 (예: Wild Greens, Functional Food)와 같은 층위가 아닙니다. <strong>이론</strong>은 위, <strong>라인</strong>은 아래입니다. 다음 페이지의 3단계 구조에서 명확하게 분리됩니다.</div>
+      <div class="decision-body en">Core Food does not compete with product lines (Wild Greens, Functional Food). <strong>Theory</strong> sits above. <strong>Lines</strong> sit below. The next page makes this hierarchy explicit.</div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div></div>
+    <div class="brand-mark">
+      <svg class="brand-mark-icon" viewBox="0 0 24 24" fill="none">
+        <circle cx="9" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+        <circle cx="15" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+      </svg>
+      <div class="brand-mark-text">All Vital<br>Organics</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 09 BRAND ARCHITECTURE · 3 LEVELS ============== -->
+<section class="page">
+  <div class="page-header">
+    <div class="breadcrumb"><strong>07</strong> · Brand Architecture · 3 Levels</div>
+    <div class="page-num">P 09 / 14</div>
+  </div>
+  <div class="page-body">
+    <p class="eyebrow kr">브랜드 구조 · 3단계</p>
+    <p class="eyebrow en">Brand Architecture · 3 Levels</p>
+    <div class="sec-display en">One theory.<br>Two lines.<br><em>Many SKUs.</em></div>
+    <div class="sec-display kr">하나의 이론.<br>두 라인.<br><em>여러 SKU.</em></div>
+
+    <div class="arch">
+      <!-- LEVEL 1 -->
+      <div class="arch-level theory">
+        <div>
+          <div class="arch-meta-label">Level 1 · Theory</div>
+          <div class="arch-name en">Core Food</div>
+          <div class="arch-name kr">Core Food (브랜드 이론)</div>
+        </div>
+        <div>
+          <p class="arch-desc kr"><strong>AVO가 무엇인가</strong> · 전체성 + 기본성 + 최소성 + 일상성. 식약동원 + 38년 헤리티지 + 창업자 검증을 기반으로 한 홀푸드 이론. 모든 라인과 SKU의 상위 기준.</p>
+          <p class="arch-desc en"><strong>What AVO is</strong> · Whole + Essential + Minimal + Daily. Whole-food theory grounded in 食藥同源, 38 years of heritage, and lived founder proof. The governing standard above every line and SKU.</p>
+        </div>
+      </div>
+
+      <!-- LEVEL 2 -->
+      <div class="arch-level">
+        <div>
+          <div class="arch-meta-label">Level 2 · Product Lines</div>
+          <div class="arch-name en">Wild Greens + Functional Food</div>
+          <div class="arch-name kr">Wild Greens + Functional Food</div>
+        </div>
+        <div>
+          <p class="arch-desc kr"><strong>AVO가 무엇을 만드는가</strong> · Core Food 이론을 구체화하는 두 라인. 라인 간에는 형식과 톤이 다르지만, 모두 같은 이론 위에 있습니다.</p>
+          <p class="arch-desc en"><strong>What AVO makes</strong> · Two product lines that operationalize Core Food. Different in format and tone; identical in theory.</p>
+
+          <div class="arch-sub-grid">
+            <div class="arch-sub">
+              <div class="arch-sub-name kr">Wild Greens</div>
+              <div class="arch-sub-name en">Wild Greens</div>
+              <div class="arch-sub-desc kr">헤리티지 라인 · Daoom 생식 전통 연결 · 잎채소·콩·곡물·과채 기반 · RTD + 분말</div>
+              <div class="arch-sub-desc en">Heritage line · Connects to Daoom's whole-food tradition · greens, soy, grains, fruits & vegetables · RTD + powder</div>
+            </div>
+            <div class="arch-sub">
+              <div class="arch-sub-name kr">Functional Food</div>
+              <div class="arch-sub-name en">Functional Food</div>
+              <div class="arch-sub-desc kr">확장 라인 · (진짜 원료 + 명확한 기능) 네이밍 패턴 · 일반식품 라인 유지</div>
+              <div class="arch-sub-desc en">Expansion line · (Real Ingredient + Clear Function) naming pattern · stays in general-food lane</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEVEL 3 -->
+      <div class="arch-level">
+        <div>
+          <div class="arch-meta-label">Level 3 · SKUs</div>
+          <div class="arch-name en">Individual products</div>
+          <div class="arch-name kr">개별 제품</div>
+        </div>
+        <div>
+          <p class="arch-desc kr"><strong>AVO가 지금 / 앞으로 출시하는 것</strong> · 각 SKU는 하나의 라인에 속하고, 라인은 Core Food 이론을 따릅니다.</p>
+          <p class="arch-desc en"><strong>What AVO ships</strong> · Each SKU sits within one line; every line follows the Core Food theory.</p>
+
+          <div class="sku-list">
+            <div class="sku live">
+              <div class="sku-status">출시 · Live</div>
+              <div class="sku-name">샐러두유 · Wild Greens Salad Soymilk</div>
+              <div class="sku-line">Wild Greens · 190mL × 15 · 2026</div>
+            </div>
+            <div class="sku">
+              <div class="sku-status">Phase 1.2</div>
+              <div class="sku-name">Complete Powder</div>
+              <div class="sku-line">Wild Greens · 잎채소+단백질+섬유 · 예정</div>
+            </div>
+            <div class="sku">
+              <div class="sku-status">Phase 1.3</div>
+              <div class="sku-name">Essentials Powder</div>
+              <div class="sku-line">Wild Greens · 잎채소+섬유 · 예정</div>
+            </div>
+            <div class="sku">
+              <div class="sku-status">R&D</div>
+              <div class="sku-name">Ginger Bloat</div>
+              <div class="sku-line">Functional Food · 생강 · 소화 편안함</div>
+            </div>
+            <div class="sku">
+              <div class="sku-status">R&D</div>
+              <div class="sku-name">Lime Sleep</div>
+              <div class="sku-line">Functional Food · 라임 껍질 · 수면 지원</div>
+            </div>
+            <div class="sku">
+              <div class="sku-status">TBD</div>
+              <div class="sku-name">Future SKUs</div>
+              <div class="sku-line">두 라인 안에서 자연스럽게 확장</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="decision">
+      <div class="decision-title kr">3단계 구조의 의미</div>
+      <div class="decision-title en">Why three levels matter</div>
+      <div class="decision-body kr">이론은 변하지 않고, 라인과 SKU는 확장됩니다. 어떤 새로운 SKU도 Core Food 이론을 통과해야 출시될 수 있습니다. 이 구조 자체가 AVO의 거버넌스이자 AI-네이티브 시스템의 기반입니다.</div>
+      <div class="decision-body en">The theory does not change; lines and SKUs extend. Any new SKU must pass through Core Food before it ships. This structure is AVO's governance — and the basis of an AI-native system.</div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div></div>
+    <div class="brand-mark">
+      <svg class="brand-mark-icon" viewBox="0 0 24 24" fill="none">
+        <circle cx="9" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+        <circle cx="15" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+      </svg>
+      <div class="brand-mark-text">All Vital<br>Organics</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 10 THREE PROMISES ============== -->
+<section class="page">
+  <div class="page-header">
+    <div class="breadcrumb"><strong>08</strong> · The Three Promises</div>
+    <div class="page-num">P 10 / 14</div>
+  </div>
+  <div class="page-body">
+    <p class="eyebrow kr">세 가지 약속</p>
+    <p class="eyebrow en">The Three Promises</p>
+    <div class="sec-display en">Three sentences.<br><em>One brand.</em></div>
+    <div class="sec-display kr">세 개의 문장.<br><em>하나의 브랜드.</em></div>
+
+    <p class="lead kr">Core Food 이론을 일상의 카피로 옮긴 결과가 세 개의 약속입니다. 헤드라인·패키지·광고에서 반복 가능한 시그니처 문장 시스템.</p>
+    <p class="lead en">The Core Food theory translated into three repeatable promises. A signature sentence system for headlines, packaging, and campaigns.</p>
+
+    <div class="promises">
+      <div class="promise-item">
+        <div class="promise-num">Promise 01</div>
+        <div class="promise-text en">Nothing missing</div>
+        <div class="promise-text kr">빠진 것이 없다</div>
+        <div class="promise-sub kr">통째로 담는 원칙 — 분리 추출이 아니라 식물 전체를 보존한다.</div>
+        <div class="promise-sub en">The whole-plant principle — preservation, not isolation.</div>
+      </div>
+      <div class="promise-item">
+        <div class="promise-num">Promise 02</div>
+        <div class="promise-text en">Nothing extra</div>
+        <div class="promise-text kr">더한 것이 없다</div>
+        <div class="promise-sub kr">이유 있는 구성만 — 불필요한 첨가는 빼고, 본질만 남긴다.</div>
+        <div class="promise-sub en">Only what has a reason — additives removed, essentials preserved.</div>
+      </div>
+      <div class="promise-item">
+        <div class="promise-num">Promise 03</div>
+        <div class="promise-text en">Nothing in between</div>
+        <div class="promise-text kr">사이를 덜어낸다</div>
+        <div class="promise-sub kr">기원에서 몸까지의 짧은 거리 — 불필요한 가공과 단계를 줄인다.</div>
+        <div class="promise-sub en">A shorter distance from origin to body — fewer processing steps.</div>
+      </div>
+    </div>
+
+    <p class="note-text kr">세 약속은 AND 관계입니다. 셋이 동시에 충족되어야 Core Food의 기준을 통과합니다. 어떤 SKU도 두 개만 충족하면 출시 보류 — 이것이 Core Food 거버넌스의 작동 원리입니다.</p>
+    <p class="note-text en">The three promises are conjunctive. All three must hold for a SKU to clear Core Food. Meeting only two is grounds for hold — this is how Core Food governance operates.</p>
+  </div>
+  <div class="page-footer">
+    <div></div>
+    <div class="brand-mark">
+      <svg class="brand-mark-icon" viewBox="0 0 24 24" fill="none">
+        <circle cx="9" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+        <circle cx="15" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+      </svg>
+      <div class="brand-mark-text">All Vital<br>Organics</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 11 MESSAGING PRINCIPLES ============== -->
+<section class="page">
+  <div class="page-header">
+    <div class="breadcrumb"><strong>09</strong> · Messaging Principles</div>
+    <div class="page-num">P 11 / 14</div>
+  </div>
+  <div class="page-body">
+    <p class="eyebrow kr">메시지 원칙</p>
+    <p class="eyebrow en">Messaging Principles</p>
+    <div class="sec-display en">Safer language,<br>not <em>stronger claims.</em></div>
+    <div class="sec-display kr">강한 표현보다<br><em>안전한 체계.</em></div>
+
+    <p class="lead kr">공식 문서에서는 치료·효능·질병 암시를 피하고, 제품의 구조와 원칙을 중심으로 말합니다. 표현이 강할수록 신뢰는 약해질 수 있습니다.</p>
+    <p class="lead en">Official copy avoids treatment, efficacy, and disease implications. It leads with product structure and principle. Stronger claims often weaken trust.</p>
+
+    <div class="claim-table">
+      <div class="claim">
+        <div class="claim-label kr">피해야 할 표현</div>
+        <div class="claim-label en">Avoid</div>
+        <p class="claim-text bad kr">치유하는 음식 / 효과가 있었다 / 병원이 포기한 사람들 / 면역 강화 / 정화 / 해독</p>
+        <p class="claim-text bad en">Food that heals · It worked · People hospitals gave up on · Immune boost · Cleanse · Detox</p>
+      </div>
+      <div class="claim">
+        <div class="claim-label kr">대체 표현</div>
+        <div class="claim-label en">Use Instead</div>
+        <p class="claim-text good kr">홀푸드 기반 영양 / 매일의 기준선 / 식물성 원료의 전체성 / 일상의 회복력 / 음식에서 시작하는 영양</p>
+        <p class="claim-text good en">Whole-food nourishment · Daily baseline · Integrity of plant ingredients · Everyday resilience · Nourishment that begins with food</p>
+      </div>
+      <div class="claim">
+        <div class="claim-label kr">이유</div>
+        <div class="claim-label en">Reason</div>
+        <p class="claim-text reason kr">브랜드를 과장된 효능 주장보다 신뢰 가능한 식품 기준으로 인식시킵니다. 규제 안정성 + 카테고리 차별화를 동시에 확보합니다.</p>
+        <p class="claim-text reason en">Positions AVO as a credible food standard, not an exaggerated health claim. Secures both regulatory stability and category differentiation.</p>
+      </div>
+    </div>
+
+    <table class="axis-table kr">
+      <thead><tr><th>메시지 축</th><th>권장 문장</th><th>사용 목적</th></tr></thead>
+      <tbody>
+        <tr><td>Heritage</td><td>"38년간 지켜온 것은 레시피가 아니라 원칙입니다."</td><td>전통성을 고정된 과거가 아닌 지속된 기준으로 설명</td></tr>
+        <tr><td>Origin</td><td>"책 속 두 아이가 지금 AVO를 만듭니다."</td><td>창업자 검증을 신뢰의 근거로 사용</td></tr>
+        <tr><td>Belief</td><td>"음식과 약은 한 근원 — 식약동원(食藥同源)."</td><td>브랜드 신념을 카테고리 차별화의 깊이로</td></tr>
+        <tr><td>Product</td><td>"식물성 원료의 전체성을 가능한 한 그대로 담습니다."</td><td>성분 수보다 제품 철학을 강조</td></tr>
+        <tr><td>Category</td><td>"AVO는 보충제가 아니라 Core Food라는 새로운 기준을 제안합니다."</td><td>카테고리 차별화</td></tr>
+      </tbody>
+    </table>
+
+    <table class="axis-table en">
+      <thead><tr><th>Axis</th><th>Recommended line</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Heritage</td><td>"What has remained for 38 years is not a recipe — it is a principle."</td><td>Frame heritage as a sustained standard, not frozen past.</td></tr>
+        <tr><td>Origin</td><td>"The two children in the book are the two brothers behind AVO."</td><td>Use founder-as-proof as the credibility anchor.</td></tr>
+        <tr><td>Belief</td><td>"Food and medicine share one source — 食藥同源."</td><td>Use belief as the depth that differentiates the category.</td></tr>
+        <tr><td>Product</td><td>"AVO preserves the integrity of plant-based ingredients as much as possible."</td><td>Emphasize product philosophy over ingredient count.</td></tr>
+        <tr><td>Category</td><td>"AVO proposes a new standard called Core Food, beyond supplements."</td><td>Clarify category differentiation.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="page-footer">
+    <div></div>
+    <div class="brand-mark">
+      <svg class="brand-mark-icon" viewBox="0 0 24 24" fill="none">
+        <circle cx="9" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+        <circle cx="15" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+      </svg>
+      <div class="brand-mark-text">All Vital<br>Organics</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 12 VISUAL SYSTEM ============== -->
+<section class="page">
+  <div class="page-header">
+    <div class="breadcrumb"><strong>10</strong> · Visual System</div>
+    <div class="page-num">P 12 / 14</div>
+  </div>
+  <div class="page-body">
+    <p class="eyebrow kr">시각 시스템</p>
+    <p class="eyebrow en">Visual System</p>
+    <div class="sec-display en">Colors aren't<br><em>decoration.</em></div>
+    <div class="sec-display kr">색은<br><em>장식이 아니다.</em></div>
+
+    <p class="lead kr">AVO의 시각 시스템은 분위기에서 출발하지 않습니다. <strong>제품 구조 — 다양한 식물성 원료의 다양성</strong>에서 출발합니다. 그래서 시각 시스템 자체가 카테고리 차별화를 시각적으로 증명합니다.</p>
+    <p class="lead en">AVO's visual system does not start from mood. It starts from <strong>product structure — the diversity of plant ingredients</strong>. The visual system itself becomes proof of category difference.</p>
+
+    <div class="system-grid">
+      <div class="system-card">
+        <div class="sym-label">Motif 01</div>
+        <h4 class="en">Blending</h4>
+        <h4 class="kr">블렌딩</h4>
+        <p class="kr">AVO의 다양한 식물성 원료가 물과 만나면 색이 부드러워지고, 번지고, 섞입니다. 블러와 그라디언트는 장식이 아니라 제품이 실제로 작동하는 방식에서 출발합니다.</p>
+        <p class="en">AVO's diverse plant ingredients soften, blur, and blend when they meet water. Blur and gradient come from the product's actual behavior, not decoration.</p>
+        <div class="spectrum">
+          <div class="spec-seg" style="background:#2aa898"></div>
+          <div class="spec-seg" style="background:#6ea858"></div>
+          <div class="spec-seg" style="background:#608048"></div>
+          <div class="spec-seg" style="background:#d81874"></div>
+          <div class="spec-seg" style="background:#264a80"></div>
+          <div class="spec-seg" style="background:#4060c8"></div>
+          <div class="spec-seg" style="background:#7a40a0"></div>
+          <div class="spec-seg" style="background:#4a8068"></div>
+          <div class="spec-seg" style="background:#c88080"></div>
+          <div class="spec-seg" style="background:#907060"></div>
+          <div class="spec-seg" style="background:#c4b070"></div>
+          <div class="spec-seg" style="background:#9898c8"></div>
+          <div class="spec-seg" style="background:#686460"></div>
+          <div class="spec-seg" style="background:#b8b4a8"></div>
+        </div>
+        <p class="spectrum-caption kr">AVO 포뮬라의 다양한 식물성 원료 — 대표 색상으로 시각화한 시스템. 색상 수는 시각 시스템 단위이며 라벨의 영양 표시와는 별개입니다.</p>
+        <p class="spectrum-caption en">A spectrum representing diverse plant origins in the AVO formula. Color count is a visual-system unit, not a regulatory ingredient claim.</p>
+      </div>
+
+      <div class="system-card">
+        <div class="sym-label">System Palette</div>
+        <h4 class="en">Brand Palette</h4>
+        <h4 class="kr">브랜드 팔레트</h4>
+        <p class="kr">스펙트럼은 식물 원료의 다양성을 보여주고, 브랜드 팔레트는 일관된 톤을 잡습니다. 모든 패키지·웹·인쇄에서 동일하게 작동합니다.</p>
+        <p class="en">The spectrum shows ingredient diversity; the brand palette holds the tone. The same four tokens carry across packaging, web, and print.</p>
+        <div class="palette">
+          <div class="palette-chip pc-forest"><span>Forest</span><span class="hex">#346539</span></div>
+          <div class="palette-chip pc-sage"><span>Sage</span><span class="hex">#B9D2BD</span></div>
+          <div class="palette-chip pc-cream"><span>Cream</span><span class="hex">#FAFAF7</span></div>
+          <div class="palette-chip pc-ink"><span>Ink</span><span class="hex">#161614</span></div>
+        </div>
+        <p class="spectrum-caption kr" style="margin-top:18px;">서체: Playfair Display (EN 헤드라인) · Noto Serif KR (KR 헤드라인) · Inter / Pretendard (본문)</p>
+        <p class="spectrum-caption en" style="margin-top:18px;">Type: Playfair Display (EN headlines) · Noto Serif KR (KR headlines) · Inter / Pretendard (body)</p>
+      </div>
+    </div>
+
+    <div class="decision">
+      <div class="decision-title kr">디자인 원칙</div>
+      <div class="decision-title en">Design Principle</div>
+      <div class="decision-body kr">시각 언어는 "예쁜 유기농"이 아니라 <strong>성분의 전체성과 혼합 과정을 보이게 하는 시스템</strong>이어야 합니다. 장식이 아닌 증명.</div>
+      <div class="decision-body en">The visual language is not "pretty organic." It is a <strong>system that makes ingredient integrity and the blending process visible</strong>. Proof, not decoration.</div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div></div>
+    <div class="brand-mark">
+      <svg class="brand-mark-icon" viewBox="0 0 24 24" fill="none">
+        <circle cx="9" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+        <circle cx="15" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+      </svg>
+      <div class="brand-mark-text">All Vital<br>Organics</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 13 SYMBOL · FOCUS RING ============== -->
+<section class="page">
+  <div class="page-header">
+    <div class="breadcrumb"><strong>11</strong> · Symbol · Focus Ring</div>
+    <div class="page-num">P 13 / 14</div>
+  </div>
+  <div class="page-body">
+    <p class="eyebrow kr">심볼 · 포커스 링</p>
+    <p class="eyebrow en">Symbol · Focus Ring</p>
+    <div class="sec-display en">The symbol is<br>generated, not <em>drawn.</em></div>
+    <div class="sec-display kr">심볼은 그려지는 것이 아니라<br><em>생성된다.</em></div>
+
+    <p class="lead kr">AVO의 심볼은 성분을 감싸는 용기가 아닙니다. 성분들이 서로 만나며 만들어내는 장면입니다. 원은 각각의 식물성 기원을 나타내고, 겹침은 서로 다른 기원이 하나의 홀푸드 시스템을 이루는 순간을 보여줍니다.</p>
+    <p class="lead en">The AVO symbol is not a container placed around ingredients. It is a scene created by ingredients meeting each other. Circles represent individual plant sources; their overlap suggests separate origins forming one whole-food system.</p>
+
+    <div class="symbol-grid">
+      <div class="sym-cell">
+        <div class="sym-visual">
+          <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
+            <circle cx="56" cy="70" r="34" fill="#6ea858" opacity="0.35"/>
+            <circle cx="78" cy="64" r="36" fill="#2aa898" opacity="0.32"/>
+            <circle cx="70" cy="84" r="30" fill="#7a40a0" opacity="0.23"/>
+            <circle cx="54" cy="70" r="35" stroke="#161614" stroke-width="1.3" fill="none"/>
+            <circle cx="84" cy="70" r="35" stroke="#161614" stroke-width="1.3" fill="none"/>
+          </svg>
+        </div>
+        <div class="sym-label">Role 01 · Generated Mark</div>
+        <p class="sym-desc kr">마크는 겹침에서 만들어집니다. 개별 원료가 하나의 시각적 몸체가 되는 방식. 단순한 두 원의 만남이 AVO의 정체성을 표현합니다.</p>
+        <p class="sym-desc en">The mark is built from overlap — individual sources becoming a single visual body. Two simple circles meeting express AVO's identity.</p>
+      </div>
+      <div class="sym-cell">
+        <div class="sym-visual">
+          <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
+            <rect x="10" y="28" width="120" height="84" rx="3" fill="#DCE7DD" opacity="0.7"/>
+            <rect x="22" y="42" width="42" height="26" rx="2" fill="#B9D2BD" opacity="0.6"/>
+            <rect x="74" y="48" width="30" height="20" rx="2" fill="#B9D2BD" opacity="0.6"/>
+            <circle cx="54" cy="70" r="32" stroke="#161614" stroke-width="1.3" fill="none"/>
+            <circle cx="86" cy="70" r="32" stroke="#161614" stroke-width="1.3" fill="none"/>
+            <circle cx="70" cy="70" r="4" fill="#346539" opacity="0.85"/>
+          </svg>
+        </div>
+        <div class="sym-label">Role 02 · Focus Device</div>
+        <p class="sym-desc kr">사진 위에서는 포커스 링으로 사용되어 원료·기원·섭취 리추얼·특정 순간으로 시선을 이끕니다. 브랜드가 무엇을 주목하는지를 시각적으로 지정하는 장치.</p>
+        <p class="sym-desc en">Over photography, the symbol becomes a focus ring — directing attention to an ingredient, origin, ritual, or moment. A device that visually names what the brand notices.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div></div>
+    <div class="brand-mark">
+      <svg class="brand-mark-icon" viewBox="0 0 24 24" fill="none">
+        <circle cx="9" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+        <circle cx="15" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+      </svg>
+      <div class="brand-mark-text">All Vital<br>Organics</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 14 FINAL DIRECTION + AI SEED ============== -->
+<section class="page">
+  <div class="page-header">
+    <div class="breadcrumb"><strong>12</strong> · Final Direction · AI Seed</div>
+    <div class="page-num">P 14 / 14</div>
+  </div>
+  <div class="page-body">
+    <p class="eyebrow kr">최종 방향 · AI 시드</p>
+    <p class="eyebrow en">Final Direction · AI Seed</p>
+    <div class="sec-display en">AVO does not exaggerate.<br>It <em>proposes a standard.</em></div>
+    <div class="sec-display kr">AVO는 과장하지 않는다.<br><em>기준을 제안한다.</em></div>
+
+    <table class="sum-table kr">
+      <tbody>
+        <tr><td>Brand Role</td><td>보충제 시장에서 더 강한 효능을 말하는 것이 아니라, 홀푸드 기준 (Core Food) 을 제안합니다.</td></tr>
+        <tr><td>Category Language</td><td>Organic은 진입 언어, Core Food는 브랜드 이론. 이 둘은 같은 층이 아닙니다.</td></tr>
+        <tr><td>Architecture</td><td>Core Food (이론) → Wild Greens + Functional Food (라인) → 개별 SKU. 3단계 거버넌스.</td></tr>
+        <tr><td>Belief Layer</td><td>식약동원(食藥同源) — 신념의 깊이는 라벨 카피가 아닌 브랜드 이론에 작동합니다.</td></tr>
+        <tr><td>Origin Anchor</td><td>1988 다움 헤리티지 + 어머니 책 + 형제 1,000일 — 창업자가 직접 검증한 원칙.</td></tr>
+        <tr><td>Messaging Principle</td><td>치유·질병·효과보다 전체성·기준·일상성을 중심으로 말합니다.</td></tr>
+        <tr><td>Visual Principle</td><td>블렌딩 · 스펙트럼 · 포커스 링은 제품 구조에서 파생됩니다. 장식이 아닌 증명.</td></tr>
+      </tbody>
+    </table>
+
+    <table class="sum-table en">
+      <tbody>
+        <tr><td>Brand Role</td><td>Do not make stronger supplement claims. Propose a whole-food standard (Core Food).</td></tr>
+        <tr><td>Category Language</td><td>Organic = entry. Core Food = brand theory. They are not at the same altitude.</td></tr>
+        <tr><td>Architecture</td><td>Core Food (theory) → Wild Greens + Functional Food (lines) → individual SKUs. Three-level governance.</td></tr>
+        <tr><td>Belief Layer</td><td>食藥同源 — belief operates at brand-theory depth, not on labels.</td></tr>
+        <tr><td>Origin Anchor</td><td>1988 Daoom heritage + the mother's book + the brothers' 1,000 days — founders are the lived proof.</td></tr>
+        <tr><td>Messaging Principle</td><td>Lead with integrity, standard, and daily routine rather than healing, disease, or effects.</td></tr>
+        <tr><td>Visual Principle</td><td>Blending, spectrum, and focus ring are derived from product structure. Proof, not decoration.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="tag-list">
+      <span class="tag">Farm to body.</span>
+      <span class="tag">Nothing missing</span>
+      <span class="tag">Nothing extra</span>
+      <span class="tag">Nothing in between</span>
+      <span class="tag">Core Food</span>
+      <span class="tag">食藥同源</span>
+      <span class="tag">Since 1988</span>
+    </div>
+
+    <div class="ai-seed">
+      <div class="ai-seed-label">AI · Prompt Seed</div>
+      <p class="ai-seed-text">
+        <strong>AVO (All Vital Organics)</strong> is a Korean food brand begun in 1988 (38-year heritage via <strong>Daoom</strong>). Belief: <strong>食藥同源</strong> — food and medicine share one source. Origin: the founders (Justin &amp; Alex Kim) are the two children documented in their mother's book about a 1,000-day recovery through food. Brand theory: <strong>Core Food</strong> — whole, essential, minimal, daily — sitting above two product lines, <strong>Wild Greens</strong> (heritage line; live SKU: 샐러두유 Salad Soymilk) and <strong>Functional Food</strong> (real ingredient + clear function pattern, R&amp;D). Three promises: <strong>Nothing missing · Nothing extra · Nothing in between</strong>. Voice: observational, declarative, evidence-respectful, never breathless. Tagline: <strong>"Farm to body."</strong> Visual: Forest #346539 · Sage #B9D2BD · Cream #FAFAF7 · Ink #161614, with a spectrum representing ingredient diversity and a two-circle Focus Ring symbol. Never claim healing, cure, disease, or efficacy. Never name the manufacturer (use "partner manufacturer · HACCP certified facility · Pyeongchang, Korea"). Never use "proprietary blend" language. Generate brand-aligned copy and visuals from this seed.
+      </p>
+      <div class="ai-seed-meta">
+        Paste this paragraph into any AI tool as a system primer for AVO-aligned generation. Pair with the visual tokens above.
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div></div>
+    <div class="brand-mark">
+      <svg class="brand-mark-icon" viewBox="0 0 24 24" fill="none">
+        <circle cx="9" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+        <circle cx="15" cy="12" r="7" stroke="#161614" stroke-width="1.2"/>
+      </svg>
+      <div class="brand-mark-text">All Vital<br>Organics</div>
+    </div>
+  </div>
+</section>
+
+<script>
+function setLang(lang) {
+  document.body.className = 'lang-' + lang;
+  document.getElementById('btn-kr').classList.toggle('active', lang === 'kr');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  localStorage.setItem('avo_brand_lang', lang);
+}
+const saved = localStorage.getItem('avo_brand_lang') || 'kr';
+setLang(saved);
+</script>
+
+</body>
+</html>
